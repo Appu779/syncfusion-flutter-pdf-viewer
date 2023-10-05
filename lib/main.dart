@@ -2,12 +2,16 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:syncfusion_flutter_pdf/pdf.dart';
+import 'package:http/http.dart' as http;
+import 'package:weeklynuget/screens/pages/routes/subjects.dart';
 
-void main() {
+void main() async {
   runApp(MaterialApp(
-    home: MyApp(),
+    debugShowCheckedModeBanner: false,
+    home: SubjectList(),
   ));
 }
 
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: SubjectList(),
     );
   }
 }
